@@ -10,7 +10,7 @@ install:
 - pip install coveralls
 
 script:
-- python --cov= unittest/
+- python --cov
 
 after-success:
 - coverage run -m unittest
