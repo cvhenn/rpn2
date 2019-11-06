@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 import operator
 import sys
 from termcolor import colored, cprint
