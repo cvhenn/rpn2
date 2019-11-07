@@ -21,5 +21,9 @@ class TestBasics(unittest.TestCase):
     def test_in(self):
         result = rpn.calculate("4 4 @")
         self.assertEqual(1, result)
+    def test_in2(self):
+        result = rpn.calculate("4 5 @")
+        self.assertEqual(0, result)
+
 if(__name__ == '__main__'):
     unittest.main()
