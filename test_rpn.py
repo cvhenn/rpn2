@@ -18,5 +18,6 @@ class TestBasics(unittest.TestCase):
     def test_power(self):
         result = rpn.calculate("3 3 ^")
         self.assertEqual(27, result)
+
 if(__name__ == '__main__'):
     unittest.main()
