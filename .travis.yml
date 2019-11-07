@@ -2,6 +2,7 @@ language: python
 
 install:
 - pip install -r requirements.txt
+- pip install termcolor
 
 script:
 - python3 -m unittest
