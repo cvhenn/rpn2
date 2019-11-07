@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 
-
 import operator
-import sys
-from termcolor import colored, cprint
+
 
 operators = {
     '+': operator.add,
     '-': operator.sub,
     '*': operator.mul,
     '/': operator.truediv,
+    '^': operator.pow,
 }
 
 def calculate(myarg):
@@ -24,7 +23,7 @@ def calculate(myarg):
             arg1 = stack.pop()
             result = function(arg1, arg2)
             stack.append(result)
-        cprint(stack, 'cyan')
+        print(stack)
     if len(stack) != 1:
         raise TypeError("Too many parameters")
     return stack.pop()
@@ -32,9 +31,7 @@ def calculate(myarg):
 def main():
     while True:
         result = calculate(input("rpn calc> "))
-        cprint("Result: ",'green')
-        cprint(result,'magenta')
+        print("Result: ", result)
 
 if __name__ == '__main__':
     main()
-
